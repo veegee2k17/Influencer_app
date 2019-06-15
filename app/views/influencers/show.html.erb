@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @influencer.id %>
+</p>
+
+<p>
+  <strong>Handle:</strong>
+  <%= @influencer.handle %>
+</p>
+
+<p>
+  <strong>Follower count:</strong>
+  <%= @influencer.follower_count %>
+</p>
+
+<p>
+  <strong>External created at:</strong>
+  <%= @influencer.external_created_at %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @influencer.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @influencer.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_influencer_path(@influencer) %> |
+<%= link_to 'Back', influencers_path %>

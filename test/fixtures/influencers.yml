@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  handle: MyString
+  follower_count: 1
+  external_created_at: 2019-06-15 11:38:11
+  created_at: 2019-06-15 11:38:11
+  updated_at: 2019-06-15 11:38:11
+
+two:
+  id: 
+  handle: MyString
+  follower_count: 1
+  external_created_at: 2019-06-15 11:38:11
+  created_at: 2019-06-15 11:38:11
+  updated_at: 2019-06-15 11:38:11
