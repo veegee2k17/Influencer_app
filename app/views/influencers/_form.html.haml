@@ -1,0 +1,29 @@
+= form_with(model: influencer, local: true) do |form|
+  - if influencer.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(influencer.errors.count, "error")
+        prohibited this influencer from being saved:
+      %ul
+        - influencer.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :id
+    = form.text_field :id, id: :influencer_id
+  .field
+    = form.label :handle
+    = form.text_field :handle, id: :influencer_handle
+  .field
+    = form.label :follower_count
+    = form.number_field :follower_count, id: :influencer_follower_count
+  .field
+    = form.label :external_created_at
+    = form.datetime_select :external_created_at, id: :influencer_external_created_at
+  .field
+    = form.label :created_at
+    = form.datetime_select :created_at, id: :influencer_created_at
+  .field
+    = form.label :updated_at
+    = form.datetime_select :updated_at, id: :influencer_updated_at
+  .actions
+    = form.submit

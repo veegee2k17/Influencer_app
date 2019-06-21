@@ -1,0 +1,22 @@
+%p#notice= notice
+%p
+  %strong Id:
+  = @influencer.id
+%p
+  %strong Handle:
+  = @influencer.handle
+%p
+  %strong Follower count:
+  = @influencer.follower_count
+%p
+  %strong External created at:
+  = @influencer.external_created_at
+%p
+  %strong Created at:
+  = @influencer.created_at
+%p
+  %strong Updated at:
+  = @influencer.updated_at
+= link_to 'Edit', edit_influencer_path(@influencer)
+|
+= link_to 'Back', influencers_path

@@ -1,0 +1,28 @@
+%p#notice
+.header
+  %h1 Influencers
+
+.search-field
+  = form_tag(influencers_path method: :get) do
+    = label_tag "Handle"
+    = text_field_tag :handle, params[:store]
+  = submit_tag 'Search', name: nil
+
+.table
+  %table
+    %thead
+      %tr.row
+        %th Id
+        %th Handle
+        %th Follower_count
+        %th External_created_at
+
+    %tbody
+      - @influencers.each do |influencer|
+        %tr
+          %td= influencer.id
+          %td= link_to "#{influencer.handle}","https://www.instagram.com/#{influencer.handle}/", target: :blank
+          %td= number_with_delimiter(influencer.follower_count)
+          %td= influencer.external_created_at
+
+= link_to 'New Influencer', new_influencer_path
